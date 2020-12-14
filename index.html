@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/skeleton.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <main>
+      <section id="box">
+        <section class="row" id="controls">
+          <h3>US Annual Crime Data Visualization</h3>
+          <div class="row" id="map"></div>
+          <h1 id="selected_state"></h1>
+          <div class="row">
+            <div>
+              <label for="from">From Year</label>
+              <input
+                class="u-full-width"
+                type="number"
+                max="2019"
+                min="1990"
+                id="from"
+                value="1990"
+              />
+            </div>
+            <div>
+              <label for="to">To Year</label>
+              <input
+                class="u-full-width"
+                type="number"
+                max="2019"
+                min="1990"
+                id="to"
+                value="2019"
+              />
+            </div>
+            <div>
+              <label for="filter">Set Filter</label>
+              <select class="u-full-width" id="filter"></select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="two columns">
+              <button class="button-primary" id="dataFetch">Get data</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="dataDisplay">
+          <section class="row" id="graphs">
+            <canvas
+              width="500"
+              height="250"
+              class="graph"
+              id="country_wide_selected_crime"
+            ></canvas>
+            <canvas
+              width="500"
+              height="250"
+              class="graph"
+              id="state_wide_selected_crime"
+            ></canvas>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="fetch_data.js"></script>
+  </body>
+</html>

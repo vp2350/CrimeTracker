@@ -1,0 +1,20 @@
+
+#map {
+    border-radius: 5px;
+    height: 50vh;
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding-top: 1vh;
+}
+
+main {
+    margin: .5rem;
+}
+
+#box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
